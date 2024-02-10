@@ -23,13 +23,26 @@
 * Build the artifact: Finally, go to Build -> Build Artifacts and select the artifact you just configured. Choose Build or Rebuild to generate the JAR file.
 
 
-* * To execute a JAR file from the command prompt, follow these steps:
+## To execute a JAR file from the command prompt, follow these steps:
 
 * Open Command Prompt: Press Win + R to open the Run dialog, type cmd, and press Enter.
 
 * Navigate to the directory containing the JAR file: Use the cd command to navigate to the directory where your JAR file is located. For example
 * cd path\to\directory
-* 
 * Execute the JAR file: Once you're in the correct directory, use the java command followed by the -jar option and the name of your JAR file to execute it. For example:
 * java -jar YourJarFile.jar
-* 
+
+
+## Command List available :
+* To create a parking lot: 'create_parking_lot <number_of_available_slots>'
+* To park a car: 'park <car_registration_number> <colour>'
+* To exit a car: 'leave <slot_given_to_you>'
+* To get cars by colour: 'registration_numbers_for_cars_with_colour <colour>'
+* To get the status of parking lot: 'status'
+* To exit the parking lot system: 'exit' 
+
+
+### To use already made jar file
+
+* Go to '''out/artifacts/ParkingLotAssignment_jar'''
+* Download the jar file and follow the above jar file execution steps
