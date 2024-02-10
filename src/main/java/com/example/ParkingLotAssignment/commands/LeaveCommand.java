@@ -13,7 +13,12 @@ public class LeaveCommand implements Command{
 
     public void execute(String input){
         String[] inputSplit = input.split(" ");
-        System.out.println(ticketController.emptySlot(Integer.valueOf(inputSplit[1])));
+        try{
+            System.out.println(ticketController.emptySlot(Integer.valueOf(inputSplit[1])));
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Wrong input format \n Input command format for a car exit: "+this.commandString+" <slot number given to you>");
+        }
+
     }
 
     public boolean matches(String input){

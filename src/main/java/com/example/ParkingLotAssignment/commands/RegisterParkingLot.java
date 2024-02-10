@@ -13,8 +13,13 @@ public class RegisterParkingLot implements Command{
 
     public void execute(String input){
         String[] inputSplit = input.split(" ");
-        int numberOfSlots = Integer.valueOf(inputSplit[1]);
-        System.out.println(parkingLotController.registerParkingLot(numberOfSlots));
+        try{
+            int numberOfSlots = Integer.valueOf(inputSplit[1]);
+            System.out.println(parkingLotController.registerParkingLot(numberOfSlots));
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Wrong input format");
+            System.out.println("Input command format for creating a parking lot:  "+this.commandString+" <numberOfSlots> ");
+        }
     }
 
     @Override

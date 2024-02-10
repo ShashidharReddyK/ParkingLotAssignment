@@ -14,7 +14,13 @@ public class ParkCommand implements Command{
 
     public void execute(String input){
         String[] inputSplit = input.split(" " );
-        System.out.println(ticketcontroller.parkVehicle(inputSplit[1], inputSplit[2]));
+        try{
+            System.out.println(ticketcontroller.parkVehicle(inputSplit[1], inputSplit[2]));
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Wrong input format");
+            System.out.println("Input command format for parking a car: "+this.commandString+" <registration_number> <colour>");
+        }
+
     }
 
     public boolean matches(String input){

@@ -2,6 +2,10 @@
 
 ### maven repositories - { 'lombok' }
 
+***
+#   Make a Jar file for easy deploy with below steps
+***
+
 * Open your project: Open IntelliJ IDEA and load the project you want to export.
 
 * Build the project: Make sure your project is built and there are no compilation errors. You can do this by clicking on Build -> Build Project from the menu bar, or simply pressing Ctrl + F9 (Cmd + F9 on Mac).

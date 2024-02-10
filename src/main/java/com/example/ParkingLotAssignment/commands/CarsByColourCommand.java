@@ -13,7 +13,13 @@ public class CarsByColourCommand implements Command{
 
     public void execute(String input){
         String[] inputSplit = input.split(" ");
-        System.out.println(parkingLotController.getCarsByColour(inputSplit[1]));
+        try{
+            System.out.println(parkingLotController.getCarsByColour(inputSplit[1]));
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Wrong input format");
+            System.out.println("Input command format for getting cars by colour: "+this.commandString+" colour");
+        }
+
     }
 
     public boolean matches(String input){
